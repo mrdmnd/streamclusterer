@@ -1,0 +1,14 @@
+language: c
+sudo: true
+compiler:
+  - clang
+
+branches:
+  only:
+    - master
+
+before_install:
+  - echo "Pre-install script running."
+
+script:
+  - mkdir -p build && cd build && cmake .. && make -j && make test

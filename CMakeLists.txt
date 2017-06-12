@@ -24,13 +24,15 @@ link_directories(/usr/local/lib/)
 enable_testing()
 include(CTest)
 
+#set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 set(TEST_DATA_DIR "${CMAKE_CURRENT_SOURCE_DIR}/tests/testdata/")
 set(BENCHMARK_DATA_DIR "${CMAKE_CURRENT_SOURCE_DIR}/benchmarks/realdata/")
 message(STATUS "Using TEST_DATA_DIR: " ${TEST_DATA_DIR})
 message(STATUS "Using BENCHMARK_DATA_DIR: " ${BENCHMARK_DATA_DIR})
 
 add_subdirectory(src)
-add_subdirectory(benchmarks)
 add_subdirectory(tests)
 
 MESSAGE(STATUS "CMAKE_SYSTEM_PROCESSOR: " ${CMAKE_SYSTEM_PROCESSOR})

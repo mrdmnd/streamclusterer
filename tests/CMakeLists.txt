@@ -1,3 +1,3 @@
-add_c_test(hello_unit)
-
-add_subdirectory(vendor/cmocka)
+add_subdirectory(cmocka)
+add_subdirectory(unit)
+add_subdirectory(benchmark)
